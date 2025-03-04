@@ -45,3 +45,5 @@ Kann überdetaillierte Tests produzieren
 Erfordert Disziplin und Erfahrung
 
 GitHub Action Status
+![alt text](GitHubAction.png)
+![alt text](GitHubAction2.png)
