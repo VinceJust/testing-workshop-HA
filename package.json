@@ -4,11 +4,20 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest --coverage",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test:staged": "vitest run"
   },
   "lint-staged": {
+    "*.{js,ts,json}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
     "*.js": [
-      "vitest run"
+      "npm run test:staged"
+    ],
+    "*.md": [
+      "markdown-toc -i",
+      "prettier --write"
     ]
   },
   "keywords": [],
@@ -17,8 +26,12 @@
   "description": "",
   "devDependencies": {
     "@vitest/coverage-v8": "^3.0.7",
-    "husky": "^9.1.7", 
+    "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
-    "vitest": "^3.0.7"
+    "vitest": "^3.0.7",
+    "eslint": "^8.0.0", 
+    "prettier": "^2.3.0",
+    "markdown-toc": "^1.2.0"
   }
 }
+

@@ -60,7 +60,7 @@ describe('validateScore Function', () => {
       
       
       // Überprüfen, ob die Bonuspunkte korrekt berechnet werden
-      expect(result.score).toBe(76); // 3 Kategorien = 3 * 2 = 6 Bonuspunkte, 70 + 6 = 76
+      expect(result.score).toBe(76);
       expect(result.passed).toBe(true);
       expect(result.grade).toBe('C');
     });
